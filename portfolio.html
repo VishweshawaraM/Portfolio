@@ -3,49 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Scholarly Portfolio</title>
-    <style>
-        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
-        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; }
-        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
-        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
-        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
-        
-        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; }
-        .project-card { background: var(--card-bg); padding: 2rem; border: 1px solid var(--border-color); }
-        h2 { font-family: var(--font-heading); color: var(--accent-gold); margin-top: 0; }
-        .meta { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 1rem; display: block; letter-spacing: 0.1em; }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { VedicGold: '#D4AF37', DeepObsidian: '#050505' }, fontFamily: { serif: ['Cormorant Garamond'], sans: ['Montserrat'] } } } }</script>
 </head>
-<body>
-    <nav>
-        <div class="logo">VISHWESHWARA</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html" style="color:var(--accent-gold);">Portfolio</a>
+<body class="bg-DeepObsidian text-gray-200 font-sans antialiased">
+    <nav class="fixed w-full z-50 bg-DeepObsidian/90 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-white">VISHWESHWARA<span class="text-VedicGold">.</span></a>
+            <a href="index.html" class="text-xs uppercase tracking-widest text-VedicGold">Back Home</a>
         </div>
     </nav>
 
-    <div class="container">
-        <h1 style="font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 3rem;">Pedagogical Frameworks</h1>
-        
-        <div class="project-grid">
-            <div class="project-card">
-                <span class="meta">Curriculum Design</span>
-                <h2>Visual Grammar Systems</h2>
-                <p>Developing visual mapping techniques to explain complex Sanskrit verb conjugations (Tiṅanta) for non-native speakers, reducing rote memorization while retaining grammatical accuracy.</p>
+    <div class="max-w-5xl mx-auto px-6 pt-32 pb-20">
+        <h1 class="font-serif text-3xl text-VedicGold mb-12">Curriculum Frameworks & Research</h1>
+
+        <div class="space-y-8">
+            <div class="flex flex-col md:flex-row gap-6 p-6 border-b border-white/5 hover:bg-white/5 transition-colors">
+                <div class="md:w-1/4">
+                    <span class="text-[10px] uppercase tracking-widest text-neutral-500 block mb-1">Pedagogy</span>
+                    <span class="font-serif text-xl text-white">Visual Grammar</span>
+                </div>
+                <div class="md:w-3/4">
+                    <p class="text-neutral-400 text-sm leading-relaxed">
+                        Developing visual mapping techniques to explain complex Sanskrit verb conjugations (Tiṅanta) and case endings (Subanta). 
+                        This system bridges the gap between rote memorization and logical understanding for non-native speakers.
+                    </p>
+                </div>
             </div>
 
-            <div class="project-card">
-                <span class="meta">Research Pedagogy</span>
-                <h2>Vedic Chanting Progression</h2>
-                <p>A structured, tiered system for teaching Taittirīya Upaniṣad, breaking down complex Sandhi rules within mantras to ensure learners maintain Svara integrity.</p>
-            </div>
-            
-            <div class="project-card">
-                <span class="meta">Publication</span>
-                <h2>Advaita Concepts in Daily Practice</h2>
-                <p>A series of research notes and teaching modules connecting the metaphysical concepts of Advaita Vedānta to practical ethical living (Dharma).</p>
+            <div class="flex flex-col md:flex-row gap-6 p-6 border-b border-white/5 hover:bg-white/5 transition-colors">
+                <div class="md:w-1/4">
+                    <span class="text-[10px] uppercase tracking-widest text-neutral-500 block mb-1">Research</span>
+                    <span class="font-serif text-xl text-white">Vedic Phonetics</span>
+                </div>
+                <div class="md:w-3/4">
+                    <p class="text-neutral-400 text-sm leading-relaxed">
+                        A structured progression system for teaching Taittirīya Upaniṣad. 
+                        Focusing on the breakdown of Sandhi rules within Mantras to ensure learners maintain Svara integrity during recitation.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
