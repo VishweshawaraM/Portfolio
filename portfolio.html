@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scholarly Portfolio</title>
+    <style>
+        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
+        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; }
+        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
+        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
+        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; }
+        .project-card { background: var(--card-bg); padding: 2rem; border: 1px solid var(--border-color); }
+        h2 { font-family: var(--font-heading); color: var(--accent-gold); margin-top: 0; }
+        .meta { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 1rem; display: block; letter-spacing: 0.1em; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">VISHWESHWARA</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html" style="color:var(--accent-gold);">Portfolio</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 3rem;">Pedagogical Frameworks</h1>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <span class="meta">Curriculum Design</span>
+                <h2>Visual Grammar Systems</h2>
+                <p>Developing visual mapping techniques to explain complex Sanskrit verb conjugations (Tiṅanta) for non-native speakers, reducing rote memorization while retaining grammatical accuracy.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="meta">Research Pedagogy</span>
+                <h2>Vedic Chanting Progression</h2>
+                <p>A structured, tiered system for teaching Taittirīya Upaniṣad, breaking down complex Sandhi rules within mantras to ensure learners maintain Svara integrity.</p>
+            </div>
+            
+            <div class="project-card">
+                <span class="meta">Publication</span>
+                <h2>Advaita Concepts in Daily Practice</h2>
+                <p>A series of research notes and teaching modules connecting the metaphysical concepts of Advaita Vedānta to practical ethical living (Dharma).</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
