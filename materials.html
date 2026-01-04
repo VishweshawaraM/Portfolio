@@ -2,68 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Study Materials</title>
-    <style>
-        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
-        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; }
-        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
-        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
-        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
-        
-        .container { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
-        .resource-list { list-style: none; padding: 0; }
-        .resource-item { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
-        .resource-info h3 { font-family: var(--font-heading); font-weight: normal; margin: 0 0 0.5rem 0; font-size: 1.2rem; }
-        .resource-info p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
-        .download-btn { border: 1px solid var(--text-muted); padding: 0.5rem 1rem; font-size: 0.8rem; text-transform: uppercase; color: var(--text-main); text-decoration: none; transition: 0.2s; }
-        .download-btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
-    </style>
+    <title>Materials | Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { VedicGold: '#D4AF37', DeepObsidian: '#050505' }, fontFamily: { serif: ['Cormorant Garamond'], sans: ['Montserrat'] } } } }</script>
 </head>
-<body>
-    <nav>
-        <div class="logo">VISHWESHWARA</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="materials.html" style="color:var(--accent-gold);">Materials</a>
+<body class="bg-DeepObsidian text-gray-200 font-sans antialiased min-h-screen flex flex-col">
+    <nav class="fixed w-full z-50 bg-DeepObsidian/90 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-white">VISHWESHWARA<span class="text-VedicGold">.</span></a>
+            <a href="index.html" class="text-xs uppercase tracking-widest text-VedicGold">Back Home</a>
         </div>
     </nav>
 
-    <div class="container">
-        <h1 style="font-family: var(--font-heading); color: var(--accent-gold);">Study Resources</h1>
-        <p style="color: var(--text-muted); margin-bottom: 3rem;">
-            These materials are provided for the structured self-study (Svādhyāya) of sincere students. Please use them with respect for the tradition.
-        </p>
+    <div class="flex-grow flex items-center justify-center px-6">
+        <div class="max-w-md w-full text-center">
+            
+            <div class="mb-8 text-VedicGold">
+                <svg class="w-16 h-16 mx-auto opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm0 2.8l7.5 4.3-7.5 4.3-7.5-4.3 7.5-4.3zm-9 6.8l7.5 4.3v8.6L3 18.2V9.6zm18 8.6l-7.5 4.3v-8.6l7.5-4.3v8.6z"/></svg>
+            </div>
 
-        <ul class="resource-list">
-            <li class="resource-item">
-                <div class="resource-info">
-                    <h3>Sanskrit Alphabet & Pronunciation Guide</h3>
-                    <p>PDF Guide • Basics of Varṇamālā and Sthāna (Place of Articulation)</p>
-                </div>
-                <a href="#" class="download-btn">Access</a>
-            </li>
-            <li class="resource-item">
-                <div class="resource-info">
-                    <h3>Declension Tables (Śabda Rūpāṇi)</h3>
-                    <p>Reference Sheet • Rāma, Latā, Phalam patterns</p>
-                </div>
-                <a href="#" class="download-btn">Access</a>
-            </li>
-            <li class="resource-item">
-                <div class="resource-info">
-                    <h3>Bhagavad Gītā - Chapter 1 Notes</h3>
-                    <p>Study Notes • Key terms and grammatical breakdown</p>
-                </div>
-                <a href="#" class="download-btn">Access</a>
-            </li>
-            <li class="resource-item">
-                <div class="resource-info">
-                    <h3>Vedic Accent Markers Guide</h3>
-                    <p>Reference • Understanding Udātta, Anudātta, and Svarita markings</p>
-                </div>
-                <a href="#" class="download-btn">Access</a>
-            </li>
-        </ul>
+            <h1 class="font-serif text-3xl text-white mb-4">Digital Library</h1>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-10">
+                Access curated manuscripts, grammar charts, and chanting guides. 
+                These resources are provided for the structured self-study (Svādhyāya) of sincere students.
+            </p>
+
+            <a href="https://drive.google.com/drive/folders/1pazNVJKVXanzOet1c5nyGZCZ6vZ7f6hL" target="_blank" class="inline-block px-8 py-3 bg-VedicGold text-black font-bold text-xs uppercase tracking-widest hover:bg-white transition-colors">
+                Access Google Drive
+            </a>
+        </div>
     </div>
 </body>
 </html>
