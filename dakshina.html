@@ -3,181 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guru Dakshina | Vishweshwara</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <title>Guru Dakshina | Offerings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* Reusing Design System from Index */
-        :root { --bg-body: #0a0a0a; --bg-card: #141414; --text-main: #EAEAEA; --text-muted: #A0A0A0; --gold: #D4AF37; --border-subtle: rgba(212, 175, 55, 0.2); }
-        body { background-color: var(--bg-body); color: var(--text-main); font-family: 'Lato', sans-serif; height: 100vh; display: flex; flex-direction: column; }
-        nav { padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; }
-        .nav-links a { margin-left: 2rem; color: var(--text-muted); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
-        .nav-links a:hover { color: var(--gold); }
-
-        /* PROCESS CONTAINER */
-        .process-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
+        :root { --bg-deep: #050505; --gold: #D4AF37; --text-main: #F5F5F5; }
+        body { background: var(--bg-deep); color: var(--text-main); font-family: 'Montserrat', sans-serif; display: flex; flex-direction: column; min-height: 100vh; margin: 0; }
         
-        .dakshina-box {
-            width: 100%;
-            max-width: 600px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
+        nav { padding: 2rem 5%; border-bottom: 1px solid rgba(255,255,255,0.05); display:flex; justify-content:space-between; }
+        .logo { font-family: 'Cormorant Garamond'; color: #fff; text-decoration: none; font-size: 1.5rem; }
+
+        .container { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+
+        .payment-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             padding: 3rem;
-            border-radius: 4px;
-            position: relative;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 450px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
-        /* STEPS */
-        .step { display: none; animation: fadeIn 0.5s ease; }
-        .step.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        h1 { font-family: 'Cormorant Garamond'; color: var(--gold); font-size: 2.5rem; margin: 0 0 1rem 0; }
+        p { color: #aaa; margin-bottom: 2rem; font-size: 0.9rem; line-height: 1.6; }
 
-        h2 { font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 1.5rem; text-align: center; }
-        p { color: var(--text-muted); margin-bottom: 1.5rem; text-align: center; font-size: 0.95rem; }
-        
-        /* FORM ELEMENTS */
-        .form-group { margin-bottom: 1.5rem; }
-        label { display: block; color: var(--gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
-        input, select {
-            width: 100%; padding: 1rem; background: #000; border: 1px solid #333; color: #fff; font-family: 'Lato', sans-serif;
+        .qr-frame {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            position: relative;
         }
-        input:focus { outline: none; border-color: var(--gold); }
-
-        /* BUTTONS */
-        .btn-action {
-            width: 100%;
+        
+        /* Make sure you upload 'qrcode.png' */
+        .qr-img { width: 200px; height: 200px; display: block; }
+        
+        .upi-box {
+            background: #111;
+            border: 1px dashed var(--gold);
             padding: 1rem;
-            background: var(--gold);
-            color: #000;
-            border: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 2rem;
             cursor: pointer;
             transition: 0.3s;
-            margin-top: 1rem;
         }
-        .btn-action:hover { background: #F4C430; }
+        .upi-box:hover { background: #222; }
+        .upi-text { font-family: monospace; font-size: 1.1rem; color: #fff; }
 
-        /* QR DISPLAY */
-        .qr-placeholder {
-            width: 200px;
-            height: 200px;
-            background: #fff;
-            margin: 0 auto 2rem auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 5px solid var(--gold);
+        .btn-confirm {
+            background: var(--gold); color: #000; text-decoration: none; padding: 1rem 2rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; display: block; width: 100%; transition: 0.3s;
         }
-        .upi-id { 
-            background: #222; padding: 1rem; text-align: center; border: 1px dashed var(--gold); margin-bottom: 2rem; cursor: pointer;
-        }
+        .btn-confirm:hover { background: #fff; }
+
     </style>
 </head>
 <body>
-
     <nav>
-        <div class="logo">VISHWESHWARA</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-        </div>
+        <a href="index.html" class="logo">VISHWESHWARA</a>
+        <a href="index.html" style="color:#aaa; text-decoration:none;">Back</a>
     </nav>
 
-    <div class="process-container">
-        <div class="dakshina-box">
-            
-            <div id="step1" class="step active">
-                <h2>The Tradition of Dakṣiṇā</h2>
-                <p>
-                    Dakṣiṇā is not a commercial fee; it is an offering of gratitude (Śraddhā) that sustains the lineage and the teacher's livelihood.
-                </p>
-                <ul style="color: #ccc; font-size: 0.9rem; margin-bottom: 2rem; padding-left: 1.5rem; line-height: 1.6;">
-                    <li>This contribution enables the continuation of Vedic research.</li>
-                    <li>Payments are non-refundable as they are treated as offerings.</li>
-                    <li>Please ensure you have discussed the course structure before proceeding.</li>
-                </ul>
-                <button class="btn-action" onclick="goToStep(2)">I Understand & Agree</button>
+    <div class="container">
+        <div class="payment-card">
+            <h1>Guru Dakṣiṇā</h1>
+            <p>Your offering supports the preservation of Vedic research and the Gurukula tradition. Scan via GPay, PhonePe, or BHIM.</p>
+
+            <div class="qr-frame">
+                <img src="qrcode.png" alt="UPI QR Code" class="qr-img">
             </div>
 
-            <div id="step2" class="step">
-                <h2>Student Details</h2>
-                <p>Please provide your details for the receipt and class allocation.</p>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" id="name" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" id="email" placeholder="Enter your email">
-                </div>
-                <div class="form-group">
-                    <label>Offering For</label>
-                    <select id="course">
-                        <option>Sanskrit Grammar</option>
-                        <option>Bhagavad Gita Study</option>
-                        <option>Vedic Chanting</option>
-                        <option>General Support</option>
-                    </select>
-                </div>
-                <button class="btn-action" onclick="goToStep(3)">Proceed to Offer</button>
+            <div class="upi-box" onclick="navigator.clipboard.writeText('Vishweshwara.sanskrit@slc'); alert('UPI ID Copied!');">
+                <div style="font-size:0.7rem; color:#666; margin-bottom:5px;">TAP TO COPY UPI ID</div>
+                <div class="upi-text">Vishweshwara.sanskrit@slc</div>
             </div>
 
-            <div id="step3" class="step">
-                <h2>Offer Dakṣiṇā</h2>
-                <p>Scan the QR code using any UPI App (GPay, PhonePe, BHIM).</p>
-                
-                <div class="qr-placeholder">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=9482698612@upi&pn=Vishweshwara&cu=INR" alt="UPI QR Code">
-                </div>
-
-                <div class="upi-id" onclick="copyUPI()">
-                    <span style="display:block; font-size:0.8rem; color:#888;">UPI ID (Click to Copy)</span>
-                    <strong style="font-size:1.1rem; letter-spacing: 1px;">9482698612@upi</strong> </div>
-
-                <p style="font-size: 0.8rem; color: #666;">
-                    After payment, screenshot the receipt and send it via WhatsApp.
-                </p>
-
-                <button class="btn-action" onclick="finishProcess()">
-                    <i class="fab fa-whatsapp"></i> Send Screenshot on WhatsApp
-                </button>
-            </div>
-
+            <a href="https://wa.me/919482698612?text=Namaste,%20I%20have%20sent%20Guru%20Dakshina." class="btn-confirm">
+                <i class="fab fa-whatsapp"></i> Confirm Payment
+            </a>
         </div>
     </div>
-
-    <script>
-        function goToStep(stepNumber) {
-            // Hide all steps
-            document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
-            // Show specific step
-            document.getElementById('step' + stepNumber).classList.add('active');
-        }
-
-        function finishProcess() {
-            const name = document.getElementById('name').value;
-            const course = document.getElementById('course').value;
-            // Create WhatsApp Link
-            const text = `Namaste. I have offered Dakshina for ${course}. My name is ${name}. Sharing the receipt herewith.`;
-            window.open(`https://wa.me/919482698612?text=${encodeURIComponent(text)}`, '_blank');
-        }
-
-        function copyUPI() {
-            navigator.clipboard.writeText("9482698612@upi");
-            alert("UPI ID Copied!");
-        }
-    </script>
-
 </body>
 </html>
