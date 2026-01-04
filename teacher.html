@@ -3,68 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Teacher Profile</title>
-    <style>
-        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
-        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; }
-        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
-        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
-        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
-        
-        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
-        .profile-header { display: flex; gap: 3rem; align-items: start; margin-bottom: 3rem; }
-        .profile-pic { width: 200px; height: 200px; background-color: #222; border: 1px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.8rem; }
-        .profile-info h1 { font-family: var(--font-heading); color: var(--accent-gold); margin: 0 0 0.5rem 0; }
-        .subtitle { font-size: 1rem; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1.5rem; display: block; }
-        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
-        .detail-item strong { display: block; color: var(--accent-gold); margin-bottom: 0.3rem; font-family: var(--font-heading); }
-        .external-link { display: inline-block; margin-top: 2rem; padding: 1rem 2rem; border: 1px solid var(--border-color); color: var(--text-main); text-decoration: none; }
-        .external-link:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
-        
-        @media (max-width: 768px) { .profile-header { flex-direction: column; } }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { VedicGold: '#D4AF37', DeepObsidian: '#050505' }, fontFamily: { serif: ['Cormorant Garamond'], sans: ['Montserrat'] } } } }</script>
 </head>
-<body>
-    <nav>
-        <div class="logo">VISHWESHWARA</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="teacher.html" style="color:var(--accent-gold);">Profile</a>
+<body class="bg-DeepObsidian text-gray-200 font-sans antialiased">
+    <nav class="fixed w-full z-50 bg-DeepObsidian/90 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-white">VISHWESHWARA<span class="text-VedicGold">.</span></a>
+            <a href="index.html" class="text-xs uppercase tracking-widest text-VedicGold">Back Home</a>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="profile-header">
-            <div class="profile-pic">[ Scholar Photograph ]</div>
-            <div class="profile-info">
-                <h1>Vishweshwara</h1>
-                <span class="subtitle">Gurukula-trained Sanskrit Scholar & Vedic Educator</span>
-                <p>
-                    Dedicated to the preservation and transmission of traditional knowledge. 
-                    With over a decade of immersion in the Gurukula system, my teaching focuses on the accuracy 
-                    of grammar and the purity of pronunciation.
-                </p>
-                <a href="teaching-platforms.html" class="external-link">View Verified Credentials & Reviews</a>
+    <div class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <div class="lg:col-span-4">
+                <div class="sticky top-24">
+                    <div class="aspect-[3/4] overflow-hidden border border-VedicGold/20 mb-6">
+                        <img src="Profile.jpeg" alt="Vishweshwara M" class="w-full h-full object-cover grayscale">
+                    </div>
+                    <h3 class="font-serif text-xl text-white mb-1">Vishweshwara M</h3>
+                    <p class="text-xs uppercase tracking-widest text-VedicGold mb-6">Sanskrit Scholar</p>
+                    <div class="space-y-2 text-sm text-neutral-400">
+                        <p>📍 Bangalore, Karnataka</p>
+                        <p>🗣️ Sanskrit, English, Kannada, Hindi</p>
+                        <a href="teaching-platforms.html" class="text-VedicGold hover:underline mt-4 block">View Verified Credentials →</a>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0;">
+            <div class="lg:col-span-8 space-y-12">
+                
+                <div>
+                    <h2 class="font-serif text-2xl text-white mb-4 border-b border-white/10 pb-2">Teaching Philosophy</h2>
+                    <p class="text-neutral-400 font-light leading-relaxed">
+                        With over 7 years of immersion in the Gurukula system, my teaching focuses on the accuracy of grammar and the purity of pronunciation. 
+                        I bridge the gap between ancient wisdom and the modern learner, ensuring that the sanctity of the lineage (Paramparā) is maintained while making the subjects accessible.
+                    </p>
+                </div>
 
-        <div class="details-grid">
-            <div class="detail-item">
-                <strong>Areas of Expertise</strong>
-                Sanskrit Vyākaraṇa (Paninian Grammar), Advaita Vedānta, Krishna Yajurveda Chanting
-            </div>
-            <div class="detail-item">
-                <strong>Teaching Languages</strong>
-                English, Sanskrit, Hindi
-            </div>
-            <div class="detail-item">
-                <strong>Methodology</strong>
-                Traditional Oral Transmission (Paramparā) combined with structural analysis.
-            </div>
-            <div class="detail-item">
-                <strong>Location</strong>
-                India (Teaching Globally Online)
+                <div>
+                    <h2 class="font-serif text-2xl text-white mb-4 border-b border-white/10 pb-2">Education & Lineage</h2>
+                    <ul class="space-y-6">
+                        <li class="relative pl-6 border-l border-VedicGold/30">
+                            <span class="text-[10px] text-VedicGold uppercase tracking-widest block mb-1">Expected 2026</span>
+                            <h4 class="text-white text-lg font-serif">M.A. in Acharya (Vedanta & Shastra)</h4>
+                            <p class="text-sm text-neutral-500">Veda Vignana Shodha Samstana Samskrutha Mahapatashala</p>
+                        </li>
+                        <li class="relative pl-6 border-l border-VedicGold/30">
+                            <span class="text-[10px] text-VedicGold uppercase tracking-widest block mb-1">2024</span>
+                            <h4 class="text-white text-lg font-serif">B.A. in Shastri</h4>
+                            <p class="text-sm text-neutral-500">Focus on Sahitya, Vyakarana, and Dharmashastra</p>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
