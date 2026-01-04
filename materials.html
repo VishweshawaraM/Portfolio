@@ -2,64 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Materials | Vishweshwara</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Study Materials</title>
     <style>
-        :root { --bg-deep: #050505; --gold: #D4AF37; --text-main: #F5F5F5; }
-        body { background: var(--bg-deep); color: var(--text-main); font-family: 'Montserrat', sans-serif; margin: 0; }
+        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
+        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; }
+        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
+        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
+        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
         
-        nav { padding: 2rem 5%; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; }
-        .logo { font-family: 'Cormorant Garamond'; color: #fff; text-decoration: none; font-size: 1.5rem; }
-
-        .container { max-width: 800px; margin: 6rem auto; padding: 0 2rem; text-align: center; }
-        
-        .drive-card {
-            background: linear-gradient(145deg, #111, #0a0a0a);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 4rem 2rem;
-            border-radius: 20px;
-            transition: 0.3s;
-        }
-        .drive-card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        
-        h1 { font-family: 'Cormorant Garamond'; font-size: 3rem; color: var(--gold); margin-bottom: 1rem; }
-        .icon-drive { font-size: 4rem; color: #fff; margin-bottom: 2rem; }
-        
-        .btn-access {
-            display: inline-block;
-            background: var(--gold);
-            color: #000;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 50px;
-            margin-top: 2rem;
-            transition: 0.3s;
-        }
-        .btn-access:hover { background: #fff; box-shadow: 0 0 30px rgba(255,255,255,0.2); }
+        .container { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
+        .resource-list { list-style: none; padding: 0; }
+        .resource-item { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
+        .resource-info h3 { font-family: var(--font-heading); font-weight: normal; margin: 0 0 0.5rem 0; font-size: 1.2rem; }
+        .resource-info p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
+        .download-btn { border: 1px solid var(--text-muted); padding: 0.5rem 1rem; font-size: 0.8rem; text-transform: uppercase; color: var(--text-main); text-decoration: none; transition: 0.2s; }
+        .download-btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">VISHWESHWARA</a>
-        <a href="index.html" style="color:#aaa; text-decoration:none;">Back</a>
+        <div class="logo">VISHWESHWARA</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="materials.html" style="color:var(--accent-gold);">Materials</a>
+        </div>
     </nav>
 
     <div class="container">
-        <div class="drive-card">
-            <i class="fab fa-google-drive icon-drive"></i>
-            <h1>Digital Library</h1>
-            <p style="color: #aaa; max-width: 500px; margin: 0 auto; line-height: 1.6;">
-                Access my curated collection of Sanskrit manuscripts, grammar notes, and chanting guides via Google Drive.
-            </p>
-            
-            <a href="https://drive.google.com/drive/folders/1pazNVJKVXanzOet1c5nyGZCZ6vZ7f6hL" target="_blank" class="btn-access">
-                Open Google Drive
-            </a>
-        </div>
+        <h1 style="font-family: var(--font-heading); color: var(--accent-gold);">Study Resources</h1>
+        <p style="color: var(--text-muted); margin-bottom: 3rem;">
+            These materials are provided for the structured self-study (Svādhyāya) of sincere students. Please use them with respect for the tradition.
+        </p>
+
+        <ul class="resource-list">
+            <li class="resource-item">
+                <div class="resource-info">
+                    <h3>Sanskrit Alphabet & Pronunciation Guide</h3>
+                    <p>PDF Guide • Basics of Varṇamālā and Sthāna (Place of Articulation)</p>
+                </div>
+                <a href="#" class="download-btn">Access</a>
+            </li>
+            <li class="resource-item">
+                <div class="resource-info">
+                    <h3>Declension Tables (Śabda Rūpāṇi)</h3>
+                    <p>Reference Sheet • Rāma, Latā, Phalam patterns</p>
+                </div>
+                <a href="#" class="download-btn">Access</a>
+            </li>
+            <li class="resource-item">
+                <div class="resource-info">
+                    <h3>Bhagavad Gītā - Chapter 1 Notes</h3>
+                    <p>Study Notes • Key terms and grammatical breakdown</p>
+                </div>
+                <a href="#" class="download-btn">Access</a>
+            </li>
+            <li class="resource-item">
+                <div class="resource-info">
+                    <h3>Vedic Accent Markers Guide</h3>
+                    <p>Reference • Understanding Udātta, Anudātta, and Svarita markings</p>
+                </div>
+                <a href="#" class="download-btn">Access</a>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
