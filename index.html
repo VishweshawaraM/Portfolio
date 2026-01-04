@@ -3,222 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanskrit Scholar & Vedic Educator | Home</title>
-    <style>
-        /* DESIGN SYSTEM - SITE A AESTHETIC */
-        :root {
-            --bg-color: #121212;
-            --card-bg: #1A1A1A;
-            --text-main: #E0E0E0;
-            --text-muted: #A0A0A0;
-            --accent-gold: #C5A059;
-            --border-color: #333333;
-            --font-heading: 'Georgia', 'Times New Roman', serif;
-            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    <title>Vishweshwara M | Sanskrit Scholar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { VedicGold: '#D4AF37', DeepObsidian: '#050505', SoftText: '#EAEAEA' },
+                    fontFamily: { serif: ['Cormorant Garamond', 'serif'], sans: ['Montserrat', 'sans-serif'] }
+                }
+            }
         }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-body);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: var(--font-heading);
-            color: var(--accent-gold);
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        a:hover { color: var(--accent-gold); }
-
-        /* NAVIGATION */
-        nav {
-            padding: 1.5rem 2rem;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            background: rgba(18, 18, 18, 0.95);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-        }
-        .logo { font-family: var(--font-heading); font-size: 1.2rem; letter-spacing: 0.05em; }
-        .nav-links { display: flex; gap: 2rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; }
-
-        /* LAYOUT UTILS */
-        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
-        .text-center { text-align: center; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .section-spacer { margin-bottom: 6rem; }
-
-        /* HERO */
-        .hero {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .hero-subtitle {
-            font-size: 0.9rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-        .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 2rem; color: #fff; }
-        .shloka {
-            font-family: var(--font-heading);
-            font-style: italic;
-            color: var(--accent-gold);
-            margin-bottom: 3rem;
-            font-size: 1.2rem;
-        }
-        
-        /* BUTTONS */
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            border: 1px solid var(--accent-gold);
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-size: 0.85rem;
-            margin-top: 1rem;
-        }
-        .btn:hover { background: var(--accent-gold); color: var(--bg-color); }
-
-        /* STATS */
-        .stats-bar {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 4rem;
-        }
-        .stat-item span { display: block; }
-        .stat-num { font-family: var(--font-heading); font-size: 1.5rem; color: var(--accent-gold); }
-        .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
-
-        /* CARDS */
-        .card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s;
-        }
-        .card:hover { border-color: var(--accent-gold); transform: translateY(-3px); }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 4rem 2rem;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-    </style>
+    </script>
 </head>
-<body>
+<body class="bg-DeepObsidian text-SoftText font-sans antialiased selection:bg-VedicGold selection:text-black">
 
-    <nav>
-        <div class="logo">VISHWESHWARA</div>
-        <div class="nav-links">
-            <a href="index.html" style="color:var(--accent-gold);">Home</a>
-            <a href="about.html">About</a>
-            <a href="teaching.html">Teaching</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="materials.html">Materials</a>
-            <a href="contact.html">Contact</a>
+    <nav class="fixed w-full z-50 bg-DeepObsidian/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="font-serif text-2xl tracking-widest text-white hover:text-VedicGold transition-colors">VISHWESHWARA<span class="text-VedicGold">.</span></a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="about.html" class="text-xs uppercase tracking-[0.2em] hover:text-VedicGold transition-colors">About</a>
+                    <a href="teaching.html" class="text-xs uppercase tracking-[0.2em] hover:text-VedicGold transition-colors">Teaching</a>
+                    <a href="materials.html" class="text-xs uppercase tracking-[0.2em] hover:text-VedicGold transition-colors">Materials</a>
+                    <a href="teacher.html" class="text-xs uppercase tracking-[0.2em] hover:text-VedicGold transition-colors">Profile</a>
+                    <a href="dakshina.html" class="text-xs uppercase tracking-[0.2em] hover:text-VedicGold transition-colors">Dakṣiṇā</a>
+                    <a href="contact.html" class="text-xs uppercase tracking-[0.2em] hover:text-VedicGold transition-colors">Contact</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-VedicGold hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-b border-VedicGold/20">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="about.html" class="block px-3 py-2 text-sm uppercase tracking-widest hover:text-VedicGold">About</a>
+                <a href="teaching.html" class="block px-3 py-2 text-sm uppercase tracking-widest hover:text-VedicGold">Teaching</a>
+                <a href="materials.html" class="block px-3 py-2 text-sm uppercase tracking-widest hover:text-VedicGold">Materials</a>
+                <a href="teacher.html" class="block px-3 py-2 text-sm uppercase tracking-widest hover:text-VedicGold">Profile</a>
+                <a href="dakshina.html" class="block px-3 py-2 text-sm uppercase tracking-widest hover:text-VedicGold">Dakṣiṇā</a>
+                <a href="contact.html" class="block px-3 py-2 text-sm uppercase tracking-widest hover:text-VedicGold">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <span class="hero-subtitle">Sanskrit Scholar • Vedic Educator</span>
-        <h1>Tradition. Śāstra. Clarity.</h1>
-        <div class="shloka">
-            ॐ सह नाववतु । सह नौ भुनक्तु ।<br>
-            सह वीर्यं करवावहै ।
-        </div>
-        <p style="max-width: 600px; color: var(--text-muted); margin-bottom: 2rem;">
-            Restoring the dignity of ancient learning through structured, grammar-focused education. 
-            A digital gurukula for the sincere seeker.
-        </p>
-        <a href="teaching.html" class="btn">Begin Your Journey</a>
-    </header>
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-800/20 via-DeepObsidian to-DeepObsidian z-0"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="text-center lg:text-left order-2 lg:order-1">
+                <p class="text-VedicGold text-xs font-bold tracking-[0.3em] uppercase mb-4 border-b border-VedicGold/30 inline-block pb-1">Sanskrit Scholar • Vedic Educator</p>
+                <h1 class="font-serif text-5xl md:text-7xl leading-tight text-white mb-6">
+                    Tradition. <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-VedicGold to-yellow-200">Śāstra.</span> Clarity.
+                </h1>
+                
+                <div class="font-serif italic text-xl text-neutral-400 mb-8">
+                    "न हि ज्ञानेन सदृशं पवित्रमिह विद्यते"<br>
+                    <span class="text-sm not-italic font-sans text-neutral-500 mt-2 block">There is nothing as purifying as knowledge in this world.</span>
+                </div>
 
-    <div class="stats-bar">
-        <div class="stat-item text-center">
-            <span class="stat-num">200+</span>
-            <span class="stat-label">Students Mentored</span>
+                <p class="text-neutral-300 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0 font-light">
+                    Restoring the dignity of ancient learning. A digital Gurukula for the sincere seeker, focusing on 
+                    <span class="text-VedicGold">Vyākaraṇa</span> (Grammar), <span class="text-VedicGold">Vedānta</span>, and <span class="text-VedicGold">Vedic Chanting</span>.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="teaching.html" class="px-8 py-3 border border-VedicGold text-VedicGold hover:bg-VedicGold hover:text-black transition-all duration-300 uppercase tracking-widest text-xs font-bold">
+                        Begin Journey
+                    </a>
+                    <a href="dakshina.html" class="px-8 py-3 border border-white/20 text-white hover:border-white transition-all duration-300 uppercase tracking-widest text-xs">
+                        Offer Dakṣiṇā
+                    </a>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 flex justify-center relative">
+                <div class="absolute inset-0 bg-VedicGold/5 blur-3xl rounded-full"></div>
+                <img src="Profile.jpeg" alt="Vishweshwara M" class="relative w-full max-w-sm rounded-t-full border-b border-VedicGold/30 grayscale hover:grayscale-0 transition-all duration-700 object-cover shadow-2xl shadow-black">
+            </div>
         </div>
-        <div class="stat-item text-center">
-            <span class="stat-num">15+</span>
-            <span class="stat-label">Countries</span>
-        </div>
-        <div class="stat-item text-center">
-            <span class="stat-num">4.9★</span>
-            <span class="stat-label">Student Rating</span>
+    </section>
+
+    <div class="border-y border-white/5 bg-neutral-900/30">
+        <div class="max-w-7xl mx-auto py-8 grid grid-cols-3 gap-4 text-center">
+            <div>
+                <span class="block font-serif text-3xl text-white">200+</span>
+                <span class="text-[10px] uppercase tracking-widest text-neutral-500">Students Mentored</span>
+            </div>
+            <div>
+                <span class="block font-serif text-3xl text-white">15+</span>
+                <span class="text-[10px] uppercase tracking-widest text-neutral-500">Countries</span>
+            </div>
+            <div>
+                <span class="block font-serif text-3xl text-white">4.9★</span>
+                <span class="text-[10px] uppercase tracking-widest text-neutral-500">Student Rating</span>
+            </div>
         </div>
     </div>
-
-    <section class="container">
-        <div class="grid-3">
-            <div class="card">
-                <h3>Sanskrit Language</h3>
-                <p style="color:var(--text-muted); margin-bottom:1.5rem;">
-                    From alphabet to advanced grammar (Vyākaraṇa). Mastering the structure of the divine language.
-                </p>
-                <a href="teaching.html" style="font-size:0.9rem; text-decoration:underline;">View Syllabus</a>
-            </div>
-            <div class="card">
-                <h3>Bhagavad Gītā</h3>
-                <p style="color:var(--text-muted); margin-bottom:1.5rem;">
-                    Chanting and meaning aligned with Śaṅkara Bhāṣya. Studying the text with traditional reverence.
-                </p>
-                <a href="teaching.html" style="font-size:0.9rem; text-decoration:underline;">Explore Approach</a>
-            </div>
-            <div class="card">
-                <h3>Krishna Yajurveda</h3>
-                <p style="color:var(--text-muted); margin-bottom:1.5rem;">
-                    Strict adherence to Svara (intonation) and pronunciation rules as passed down by the lineage.
-                </p>
-                <a href="teaching.html" style="font-size:0.9rem; text-decoration:underline;">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="container text-center section-spacer">
-        <h2 style="margin-bottom: 2rem;">From the Students</h2>
-        <div style="max-width: 700px; margin: 0 auto;">
-            <p style="font-size: 1.1rem; font-style: italic; color: #ccc;">
-                "The clarity of grammar and the depth of philosophy is unlike anything I found in modern coaching centers. This is true education."
-            </p>
-            <p style="margin-top: 1rem; color: var(--accent-gold); font-family: var(--font-heading);">— Arjun S., United Kingdom</p>
-        </div>
-        <br><br>
-        <a href="testimonials.html" style="font-size: 0.9rem; border-bottom: 1px solid var(--accent-gold);">Read more reflections</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Vishweshwara. All Rights Reserved.</p>
-        <div style="margin-top: 1rem; word-spacing: 1.5rem;">
-            <a href="teacher.html">Teacher Profile</a>
-            <a href="dakshina.html">Dakṣiṇā</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </footer>
 
 </body>
 </html>
