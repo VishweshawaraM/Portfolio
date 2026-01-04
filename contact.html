@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <style>
+        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
+        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
+        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
+        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
+        
+        .container { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; text-align: center; }
+        .contact-box { background: var(--card-bg); padding: 3rem; border: 1px solid var(--border-color); width: 100%; max-width: 500px; }
+        h1 { font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 2rem; }
+        .contact-item { margin-bottom: 1.5rem; }
+        .label { display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+        .value { font-size: 1.2rem; color: #fff; }
+        a.value { text-decoration: none; border-bottom: 1px solid var(--border-color); transition: 0.3s; }
+        a.value:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">VISHWESHWARA</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html" style="color:var(--accent-gold);">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="contact-box">
+            <h1>Get in Touch</h1>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                For inquiries regarding classes or workshops.
+            </p>
+
+            <div class="contact-item">
+                <span class="label">Email</span>
+                <a href="mailto:contact@email.com" class="value">contact@email.com</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="label">WhatsApp</span>
+                <span class="value">+91 90000 00000</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="label">Social</span>
+                <a href="#" class="value" style="font-size: 1rem;">Instagram</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
