@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Teacher Profile</title>
+    <title>Teacher Profile | Vishweshwara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
-        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; }
-        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
-        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
-        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
+        /* Reuse Global Design System */
+        :root { --bg-body: #0a0a0a; --bg-card: #141414; --text-main: #EAEAEA; --text-muted: #A0A0A0; --gold: #D4AF37; --border-subtle: rgba(212, 175, 55, 0.2); }
+        body { background-color: var(--bg-body); color: var(--text-main); font-family: 'Lato', sans-serif; margin: 0; }
+        nav { padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; }
+        .nav-links a { margin-left: 2rem; color: var(--text-muted); text-decoration: none; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
         
-        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
-        .profile-header { display: flex; gap: 3rem; align-items: start; margin-bottom: 3rem; }
-        .profile-pic { width: 200px; height: 200px; background-color: #222; border: 1px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.8rem; }
-        .profile-info h1 { font-family: var(--font-heading); color: var(--accent-gold); margin: 0 0 0.5rem 0; }
-        .subtitle { font-size: 1rem; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1.5rem; display: block; }
-        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
-        .detail-item strong { display: block; color: var(--accent-gold); margin-bottom: 0.3rem; font-family: var(--font-heading); }
-        .external-link { display: inline-block; margin-top: 2rem; padding: 1rem 2rem; border: 1px solid var(--border-color); color: var(--text-main); text-decoration: none; }
-        .external-link:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+        .profile-container { max-width: 900px; margin: 4rem auto; padding: 0 2rem; display: flex; gap: 4rem; align-items: start; }
+        .profile-img { width: 300px; height: 350px; background: #222; border: 1px solid var(--gold); display: flex; justify-content: center; align-items: center; color: #555; }
+        .profile-content h1 { font-family: 'Playfair Display'; font-size: 2.5rem; color: var(--gold); margin-bottom: 0.5rem; line-height: 1.1; }
+        .subtitle { display: block; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; font-size: 0.9rem; }
         
-        @media (max-width: 768px) { .profile-header { flex-direction: column; } }
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+        .stat-box h4 { margin-bottom: 0.5rem; color: #fff; }
+        .stat-box p { font-size: 0.9rem; color: var(--text-muted); }
+
+        .btn-verify { display: inline-block; margin-top: 2rem; padding: 1rem 2rem; border: 1px solid var(--text-muted); color: var(--text-main); text-decoration: none; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
+        .btn-verify:hover { border-color: var(--gold); color: var(--gold); }
+
+        @media (max-width: 768px) { .profile-container { flex-direction: column; } .profile-img { width: 100%; } }
     </style>
 </head>
 <body>
@@ -28,44 +33,33 @@
         <div class="logo">VISHWESHWARA</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="teacher.html" style="color:var(--accent-gold);">Profile</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="profile-header">
-            <div class="profile-pic">[ Scholar Photograph ]</div>
-            <div class="profile-info">
-                <h1>Vishweshwara</h1>
-                <span class="subtitle">Gurukula-trained Sanskrit Scholar & Vedic Educator</span>
-                <p>
-                    Dedicated to the preservation and transmission of traditional knowledge. 
-                    With over a decade of immersion in the Gurukula system, my teaching focuses on the accuracy 
-                    of grammar and the purity of pronunciation.
-                </p>
-                <a href="teaching-platforms.html" class="external-link">View Verified Credentials & Reviews</a>
-            </div>
+    <div class="profile-container">
+        <div class="profile-img">
+            <span>[ Scholar Image ]</span>
         </div>
+        <div class="profile-content">
+            <h1>Vishweshwara</h1>
+            <span class="subtitle">Gurukula Scholar & Vedic Educator</span>
+            <p style="color: #ccc; margin-bottom: 1rem;">
+                With over a decade of immersion in the traditional Gurukula system, my teaching focuses on the accuracy of grammar and the purity of pronunciation.
+            </p>
+            
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <h4>Specialization</h4>
+                    <p>Paninian Grammar, Advaita Vedānta, Krishna Yajurveda</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Languages</h4>
+                    <p>Sanskrit, English, Hindi</p>
+                </div>
+            </div>
 
-        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0;">
-
-        <div class="details-grid">
-            <div class="detail-item">
-                <strong>Areas of Expertise</strong>
-                Sanskrit Vyākaraṇa (Paninian Grammar), Advaita Vedānta, Krishna Yajurveda Chanting
-            </div>
-            <div class="detail-item">
-                <strong>Teaching Languages</strong>
-                English, Sanskrit, Hindi
-            </div>
-            <div class="detail-item">
-                <strong>Methodology</strong>
-                Traditional Oral Transmission (Paramparā) combined with structural analysis.
-            </div>
-            <div class="detail-item">
-                <strong>Location</strong>
-                India (Teaching Globally Online)
-            </div>
+            <a href="teaching-platforms.html" class="btn-verify">View Verified Credentials</a>
         </div>
     </div>
 </body>
