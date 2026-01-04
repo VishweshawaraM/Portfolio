@@ -2,55 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Vishweshwara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
-        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
-        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
-        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
-        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
+        /* Shared Design System */
+        :root { --bg-body: #0a0a0a; --bg-card: #141414; --text-main: #EAEAEA; --text-muted: #A0A0A0; --gold: #D4AF37; }
+        body { background-color: var(--bg-body); color: var(--text-main); font-family: 'Lato', sans-serif; }
+        nav { padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; }
+        .nav-links a { margin-left: 2rem; color: var(--text-muted); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
         
-        .container { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; text-align: center; }
-        .contact-box { background: var(--card-bg); padding: 3rem; border: 1px solid var(--border-color); width: 100%; max-width: 500px; }
-        h1 { font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 2rem; }
-        .contact-item { margin-bottom: 1.5rem; }
-        .label { display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-        .value { font-size: 1.2rem; color: #fff; }
-        a.value { text-decoration: none; border-bottom: 1px solid var(--border-color); transition: 0.3s; }
-        a.value:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
+        .contact-container {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .info-col h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); line-height: 1.1; margin-bottom: 1.5rem; }
+        .info-col p { color: var(--text-muted); margin-bottom: 2rem; }
+        
+        .contact-methods a {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: #111;
+            border: 1px solid #333;
+            margin-bottom: 1rem;
+            color: #fff;
+            transition: 0.3s;
+        }
+        .contact-methods a:hover { border-color: var(--gold); transform: translateX(10px); }
+        .contact-methods i { width: 30px; color: var(--gold); font-size: 1.2rem; }
+
+        .form-col {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-top: 2px solid var(--gold);
+        }
+        input, textarea {
+            width: 100%; padding: 1rem; background: #080808; border: 1px solid #333; color: #fff; margin-bottom: 1rem; font-family: 'Lato', sans-serif;
+        }
+        input:focus, textarea:focus { border-color: var(--gold); outline: none; }
+        
+        .btn-send {
+            width: 100%; padding: 1rem; background: var(--gold); color: #000; font-weight: bold; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) { .contact-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="logo">VISHWESHWARA</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="contact.html" style="color:var(--accent-gold);">Contact</a>
+            <a href="dakshina.html">Dakṣiṇā</a>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="contact-box">
-            <h1>Get in Touch</h1>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">
-                For inquiries regarding classes or workshops.
-            </p>
-
-            <div class="contact-item">
-                <span class="label">Email</span>
-                <a href="mailto:contact@email.com" class="value">contact@email.com</a>
-            </div>
-
-            <div class="contact-item">
-                <span class="label">WhatsApp</span>
-                <span class="value">+91 90000 00000</span>
-            </div>
-
-            <div class="contact-item">
-                <span class="label">Social</span>
-                <a href="#" class="value" style="font-size: 1rem;">Instagram</a>
+    <div class="contact-container">
+        <div class="info-col">
+            <h1>Start the Conversation</h1>
+            <p>Whether you are a beginner seeking guidance in Sanskrit or an advanced practitioner looking to refine your Vedic chanting, I am here to guide you.</p>
+            
+            <div class="contact-methods">
+                <a href="https://wa.me/919482698612" target="_blank">
+                    <i class="fab fa-whatsapp"></i> +91 94826 98612
+                </a>
+                <a href="mailto:visanskrit.solopreneur@gmail.com">
+                    <i class="far fa-envelope"></i> visanskrit.solopreneur@gmail.com
+                </a>
+                <a href="https://instagram.com/vishweshwara_sanslancer" target="_blank">
+                    <i class="fab fa-instagram"></i> @vishweshwara_sanslancer
+                </a>
             </div>
         </div>
+
+        <div class="form-col">
+            <h3 style="color:#fff;">Send an Inquiry</h3>
+            <form action="mailto:visanskrit.solopreneur@gmail.com" method="post" enctype="text/plain">
+                <label style="color:#888; font-size:0.8rem; text-transform:uppercase;">Name</label>
+                <input type="text" name="name" required>
+                
+                <label style="color:#888; font-size:0.8rem; text-transform:uppercase;">Interested In</label>
+                <input type="text" name="subject" placeholder="e.g. Sanskrit Grammar">
+
+                <label style="color:#888; font-size:0.8rem; text-transform:uppercase;">Message</label>
+                <textarea name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn-send">Send via Email App</button>
+            </form>
+        </div>
     </div>
+
 </body>
 </html>
