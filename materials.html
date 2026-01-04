@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Study Materials</title>
+    <title>Materials | Vishweshwara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
-        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; }
-        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
-        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
-        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
-        
-        .container { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
-        .resource-list { list-style: none; padding: 0; }
-        .resource-item { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
-        .resource-info h3 { font-family: var(--font-heading); font-weight: normal; margin: 0 0 0.5rem 0; font-size: 1.2rem; }
-        .resource-info p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
-        .download-btn { border: 1px solid var(--text-muted); padding: 0.5rem 1rem; font-size: 0.8rem; text-transform: uppercase; color: var(--text-main); text-decoration: none; transition: 0.2s; }
-        .download-btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+        /* Reuse Global Design System */
+        :root { --bg-body: #0a0a0a; --bg-card: #141414; --text-main: #EAEAEA; --text-muted: #A0A0A0; --gold: #D4AF37; --border-subtle: rgba(212, 175, 55, 0.2); }
+        body { background-color: var(--bg-body); color: var(--text-main); font-family: 'Lato', sans-serif; margin: 0; }
+        nav { padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; }
+        .nav-links a { margin-left: 2rem; color: var(--text-muted); text-decoration: none; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; transition:0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        .container { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
+        .resource-card { display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #222; transition: 0.3s; }
+        .resource-card:hover { border-color: var(--gold); transform: translateX(5px); }
+        .res-title { font-size: 1.1rem; color: #fff; margin-bottom: 0.3rem; }
+        .res-type { font-size: 0.8rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; }
+        .btn-download { color: var(--text-muted); border: 1px solid #333; padding: 0.5rem 1rem; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; }
+        .btn-download:hover { background: var(--gold); color: #000; border-color: var(--gold); }
     </style>
 </head>
 <body>
@@ -24,46 +28,37 @@
         <div class="logo">VISHWESHWARA</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="materials.html" style="color:var(--accent-gold);">Materials</a>
+            <a href="dakshina.html">Dakṣiṇā</a>
         </div>
     </nav>
 
     <div class="container">
-        <h1 style="font-family: var(--font-heading); color: var(--accent-gold);">Study Resources</h1>
-        <p style="color: var(--text-muted); margin-bottom: 3rem;">
-            These materials are provided for the structured self-study (Svādhyāya) of sincere students. Please use them with respect for the tradition.
-        </p>
+        <h1 style="font-family:'Playfair Display'; color:var(--gold); margin-bottom:1rem;">Study Materials</h1>
+        <p style="color:var(--text-muted); margin-bottom:3rem;">Curated resources for the sincere student (Sādhaka).</p>
 
-        <ul class="resource-list">
-            <li class="resource-item">
-                <div class="resource-info">
-                    <h3>Sanskrit Alphabet & Pronunciation Guide</h3>
-                    <p>PDF Guide • Basics of Varṇamālā and Sthāna (Place of Articulation)</p>
-                </div>
-                <a href="#" class="download-btn">Access</a>
-            </li>
-            <li class="resource-item">
-                <div class="resource-info">
-                    <h3>Declension Tables (Śabda Rūpāṇi)</h3>
-                    <p>Reference Sheet • Rāma, Latā, Phalam patterns</p>
-                </div>
-                <a href="#" class="download-btn">Access</a>
-            </li>
-            <li class="resource-item">
-                <div class="resource-info">
-                    <h3>Bhagavad Gītā - Chapter 1 Notes</h3>
-                    <p>Study Notes • Key terms and grammatical breakdown</p>
-                </div>
-                <a href="#" class="download-btn">Access</a>
-            </li>
-            <li class="resource-item">
-                <div class="resource-info">
-                    <h3>Vedic Accent Markers Guide</h3>
-                    <p>Reference • Understanding Udātta, Anudātta, and Svarita markings</p>
-                </div>
-                <a href="#" class="download-btn">Access</a>
-            </li>
-        </ul>
+        <div class="resource-card">
+            <div>
+                <div class="res-title">Sanskrit Pronunciation Guide</div>
+                <span class="res-type">PDF Document</span>
+            </div>
+            <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+        </div>
+
+        <div class="resource-card">
+            <div>
+                <div class="res-title">Bhagavad Gītā Chapter 1 Vocabulary</div>
+                <span class="res-type">Study Sheet</span>
+            </div>
+            <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+        </div>
+
+        <div class="resource-card">
+            <div>
+                <div class="res-title">Vedic Meter (Chandas) Basics</div>
+                <span class="res-type">Reference Chart</span>
+            </div>
+            <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+        </div>
     </div>
 </body>
 </html>
