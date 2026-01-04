@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Profile</title>
+    <style>
+        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', serif; --font-body: system-ui, sans-serif; }
+        body { background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); margin: 0; }
+        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
+        .logo { font-family: var(--font-heading); color: var(--accent-gold); }
+        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        .profile-header { display: flex; gap: 3rem; align-items: start; margin-bottom: 3rem; }
+        .profile-pic { width: 200px; height: 200px; background-color: #222; border: 1px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.8rem; }
+        .profile-info h1 { font-family: var(--font-heading); color: var(--accent-gold); margin: 0 0 0.5rem 0; }
+        .subtitle { font-size: 1rem; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1.5rem; display: block; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+        .detail-item strong { display: block; color: var(--accent-gold); margin-bottom: 0.3rem; font-family: var(--font-heading); }
+        .external-link { display: inline-block; margin-top: 2rem; padding: 1rem 2rem; border: 1px solid var(--border-color); color: var(--text-main); text-decoration: none; }
+        .external-link:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+        
+        @media (max-width: 768px) { .profile-header { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">VISHWESHWARA</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="teacher.html" style="color:var(--accent-gold);">Profile</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-pic">[ Scholar Photograph ]</div>
+            <div class="profile-info">
+                <h1>Vishweshwara</h1>
+                <span class="subtitle">Gurukula-trained Sanskrit Scholar & Vedic Educator</span>
+                <p>
+                    Dedicated to the preservation and transmission of traditional knowledge. 
+                    With over a decade of immersion in the Gurukula system, my teaching focuses on the accuracy 
+                    of grammar and the purity of pronunciation.
+                </p>
+                <a href="teaching-platforms.html" class="external-link">View Verified Credentials & Reviews</a>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0;">
+
+        <div class="details-grid">
+            <div class="detail-item">
+                <strong>Areas of Expertise</strong>
+                Sanskrit Vyākaraṇa (Paninian Grammar), Advaita Vedānta, Krishna Yajurveda Chanting
+            </div>
+            <div class="detail-item">
+                <strong>Teaching Languages</strong>
+                English, Sanskrit, Hindi
+            </div>
+            <div class="detail-item">
+                <strong>Methodology</strong>
+                Traditional Oral Transmission (Paramparā) combined with structural analysis.
+            </div>
+            <div class="detail-item">
+                <strong>Location</strong>
+                India (Teaching Globally Online)
+            </div>
+        </div>
+    </div>
+</body>
+</html>
