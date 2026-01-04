@@ -2,85 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guru Dakshina | Offerings</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root { --bg-deep: #050505; --gold: #D4AF37; --text-main: #F5F5F5; }
-        body { background: var(--bg-deep); color: var(--text-main); font-family: 'Montserrat', sans-serif; display: flex; flex-direction: column; min-height: 100vh; margin: 0; }
-        
-        nav { padding: 2rem 5%; border-bottom: 1px solid rgba(255,255,255,0.05); display:flex; justify-content:space-between; }
-        .logo { font-family: 'Cormorant Garamond'; color: #fff; text-decoration: none; font-size: 1.5rem; }
-
-        .container { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; }
-
-        .payment-card {
-            background: rgba(20, 20, 20, 0.6);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            max-width: 450px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-
-        h1 { font-family: 'Cormorant Garamond'; color: var(--gold); font-size: 2.5rem; margin: 0 0 1rem 0; }
-        p { color: #aaa; margin-bottom: 2rem; font-size: 0.9rem; line-height: 1.6; }
-
-        .qr-frame {
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-        
-        /* Make sure you upload 'qrcode.png' */
-        .qr-img { width: 200px; height: 200px; display: block; }
-        
-        .upi-box {
-            background: #111;
-            border: 1px dashed var(--gold);
-            padding: 1rem;
-            margin-bottom: 2rem;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .upi-box:hover { background: #222; }
-        .upi-text { font-family: monospace; font-size: 1.1rem; color: #fff; }
-
-        .btn-confirm {
-            background: var(--gold); color: #000; text-decoration: none; padding: 1rem 2rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; display: block; width: 100%; transition: 0.3s;
-        }
-        .btn-confirm:hover { background: #fff; }
-
-    </style>
+    <title>Guru Dakṣiṇā</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { VedicGold: '#D4AF37', DeepObsidian: '#050505' }, fontFamily: { serif: ['Cormorant Garamond'], sans: ['Montserrat'] } } } }</script>
 </head>
-<body>
-    <nav>
-        <a href="index.html" class="logo">VISHWESHWARA</a>
-        <a href="index.html" style="color:#aaa; text-decoration:none;">Back</a>
+<body class="bg-DeepObsidian text-gray-200 font-sans antialiased min-h-screen flex flex-col">
+    <nav class="fixed w-full z-50 bg-DeepObsidian/90 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-white">VISHWESHWARA<span class="text-VedicGold">.</span></a>
+            <a href="index.html" class="text-xs uppercase tracking-widest text-VedicGold">Back Home</a>
+        </div>
     </nav>
 
-    <div class="container">
-        <div class="payment-card">
-            <h1>Guru Dakṣiṇā</h1>
-            <p>Your offering supports the preservation of Vedic research and the Gurukula tradition. Scan via GPay, PhonePe, or BHIM.</p>
-
-            <div class="qr-frame">
-                <img src="qrcode.jpeg" alt="UPI QR Code" class="qr-img">
+    <div class="flex-grow flex items-center justify-center px-6 py-24">
+        <div class="max-w-md w-full text-center bg-white/5 p-8 border border-white/10 backdrop-blur-md rounded-lg">
+            
+            <h1 class="font-serif text-3xl text-VedicGold mb-4">Guru Dakṣiṇā</h1>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-8">
+                In the Gurukula tradition, the exchange between teacher and student is not a commercial fee, but an offering of gratitude (Śraddhā) that sustains the lineage.
+            </p>
+            
+            <div class="bg-white p-4 rounded inline-block mb-6">
+                <img src="qrcode.jpeg" alt="UPI QR Code" class="w-48 h-48 object-contain">
             </div>
 
-            <div class="upi-box" onclick="navigator.clipboard.writeText('Vishweshwara.sanskrit@slc'); alert('UPI ID Copied!');">
-                <div style="font-size:0.7rem; color:#666; margin-bottom:5px;">TAP TO COPY UPI ID</div>
-                <div class="upi-text">Vishweshwara.sanskrit@slc</div>
+            <div class="space-y-4">
+                <p class="text-xs text-neutral-500 uppercase tracking-widest">UPI ID</p>
+                <div onclick="navigator.clipboard.writeText('Vishweshwara.sanskrit@slc'); alert('UPI ID Copied!');" class="cursor-pointer p-3 bg-black border border-white/10 hover:border-VedicGold transition-colors text-white font-mono text-sm">
+                    Vishweshwara.sanskrit@slc
+                </div>
+                
+                <a href="https://wa.me/919482698612?text=Namaste,%20I%20have%20sent%20Guru%20Dakshina." class="block w-full py-3 bg-VedicGold text-black font-bold text-xs uppercase tracking-widest hover:bg-white transition-colors">
+                    Confirm via WhatsApp
+                </a>
             </div>
 
-            <a href="https://wa.me/919482698612?text=Namaste,%20I%20have%20sent%20Guru%20Dakshina." class="btn-confirm">
-                <i class="fab fa-whatsapp"></i> Confirm Payment
-            </a>
         </div>
     </div>
 </body>
