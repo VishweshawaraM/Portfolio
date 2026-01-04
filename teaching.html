@@ -2,101 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching Domains | Syllabus</title>
-    <style>
-        :root { --bg-color: #121212; --card-bg: #1A1A1A; --text-main: #E0E0E0; --text-muted: #A0A0A0; --accent-gold: #C5A059; --border-color: #333333; --font-heading: 'Georgia', 'Times New Roman', serif; --font-body: -apple-system, sans-serif; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: var(--bg-color); color: var(--text-main); font-family: var(--font-body); }
-        h1, h2, h3 { font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 1rem; }
-        nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: rgba(18,18,18,0.95); }
-        .logo { font-family: var(--font-heading); font-size: 1.2rem; letter-spacing: 0.05em; color: var(--text-main); }
-        .nav-links { display: flex; gap: 2rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; }
-        a { text-decoration: none; color: var(--text-main); }
-        a:hover { color: var(--accent-gold); }
-        
-        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
-        .subject-block { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-bottom: 5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 3rem; }
-        .subject-block:last-child { border-bottom: none; }
-        .subject-title { font-size: 2rem; color: #fff; }
-        .tag { display: inline-block; font-size: 0.75rem; border: 1px solid var(--border-color); padding: 0.2rem 0.6rem; margin-right: 0.5rem; color: var(--text-muted); text-transform: uppercase; margin-top: 1rem; }
-        
-        @media(max-width: 768px) { .subject-block { grid-template-columns: 1fr; } }
-    </style>
+    <title>Teaching | Domains</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { VedicGold: '#D4AF37', DeepObsidian: '#050505' }, fontFamily: { serif: ['Cormorant Garamond'], sans: ['Montserrat'] } } } }</script>
 </head>
-<body>
-
-    <nav>
-        <div class="logo">VISHWESHWARA</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="teaching.html" style="color:var(--accent-gold);">Teaching</a>
-            <a href="materials.html">Materials</a>
-            <a href="teacher.html">Profile</a>
+<body class="bg-DeepObsidian text-gray-200 font-sans antialiased">
+    <nav class="fixed w-full z-50 bg-DeepObsidian/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-white">VISHWESHWARA<span class="text-VedicGold">.</span></a>
+            <a href="index.html" class="text-xs uppercase tracking-widest text-VedicGold">Back Home</a>
         </div>
     </nav>
 
-    <div class="container">
-        <h1 style="text-align: center; margin-bottom: 4rem;">Teaching Domains</h1>
+    <div class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <h1 class="font-serif text-4xl text-center text-white mb-16">The Path of Learning</h1>
 
-        <div class="subject-block">
-            <div>
-                <h2 class="subject-title">Sanskrit Language</h2>
-                <span class="tag">Grammar</span>
-                <span class="tag">Literature</span>
-            </div>
-            <div>
-                <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
-                    A structured approach to the divine language, moving from basic script recognition to complex sentence construction and Sandhi rules.
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white/5 border border-white/10 p-8 hover:border-VedicGold/50 transition-all duration-500 group">
+                <h2 class="font-serif text-2xl text-VedicGold mb-4 group-hover:text-white transition-colors">Sanskrit Language</h2>
+                <div class="flex gap-2 mb-6 text-[10px] uppercase tracking-widest text-neutral-500">
+                    <span>Grammar</span> • <span>Literature</span>
+                </div>
+                <p class="text-neutral-400 font-light leading-relaxed text-sm">
+                    From the Devanāgarī alphabet to advanced Pāṇinian grammar (Vyākaraṇa). 
+                    Understanding the mechanics of the divine language creates a structured mind.
                 </p>
-                <ul style="list-style-type: square; padding-left: 1.5rem; color: var(--text-main);">
-                    <li><strong>Devanāgarī Script:</strong> Writing and pronunciation mechanics.</li>
-                    <li><strong>Kāraka & Vibhakti:</strong> Understanding the case system.</li>
-                    <li><strong>Sandhi & Samāsa:</strong> The science of word conjunctions.</li>
-                    <li><strong>Subhāṣita Analysis:</strong> Applying grammar to literature.</li>
-                </ul>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 p-8 hover:border-VedicGold/50 transition-all duration-500 group">
+                <h2 class="font-serif text-2xl text-VedicGold mb-4 group-hover:text-white transition-colors">Bhagavad Gītā</h2>
+                <div class="flex gap-2 mb-6 text-[10px] uppercase tracking-widest text-neutral-500">
+                    <span>Philosophy</span> • <span>Vedānta</span>
+                </div>
+                <p class="text-neutral-400 font-light leading-relaxed text-sm">
+                    A verse-by-verse study aligned with Śaṅkara Bhāṣya. 
+                    We move beyond mere recitation to understanding the profound metaphysical definitions of Karma, Jñāna, and Bhakti.
+                </p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 p-8 hover:border-VedicGold/50 transition-all duration-500 group">
+                <h2 class="font-serif text-2xl text-VedicGold mb-4 group-hover:text-white transition-colors">Krishna Yajurveda</h2>
+                <div class="flex gap-2 mb-6 text-[10px] uppercase tracking-widest text-neutral-500">
+                    <span>Chanting</span> • <span>Svara</span>
+                </div>
+                <p class="text-neutral-400 font-light leading-relaxed text-sm">
+                    Strict adherence to Svara (intonation) rules. 
+                    Oral transmission (Karṇa-paramparā) of Sūktas and Mantras for the sincere practitioner.
+                </p>
             </div>
         </div>
-
-        <div class="subject-block">
-            <div>
-                <h2 class="subject-title">Bhagavad Gītā</h2>
-                <span class="tag">Philosophy</span>
-                <span class="tag">Chanting</span>
-            </div>
-            <div>
-                <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
-                    The Gītā is not merely a book to be read, but a manual for life. We study it verse by verse, paying attention to the commentary tradition.
-                </p>
-                <ul style="list-style-type: square; padding-left: 1.5rem; color: var(--text-main);">
-                    <li>Chapter-wise progression.</li>
-                    <li>Chanting with proper meter (Chandas).</li>
-                    <li>Alignment with Śaṅkara Bhāṣya (Commentary).</li>
-                    <li>Philosophical definitions of Karma, Jñāna, and Bhakti.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="subject-block">
-            <div>
-                <h2 class="subject-title">Krishna Yajurveda</h2>
-                <span class="tag">Veda</span>
-                <span class="tag">Svara</span>
-            </div>
-            <div>
-                <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
-                    The Vedas are preserved through sound. This stream focuses exclusively on the auditory discipline required to recite Mantras.
-                </p>
-                <ul style="list-style-type: square; padding-left: 1.5rem; color: var(--text-main);">
-                    <li>Svara (Intonation) Discipline (Udātta, Anudātta, Svarita).</li>
-                    <li>Mantra Pushpam & Rudram.</li>
-                    <li>Sūktas (Puruṣa, Nārāyaṇa, Durga).</li>
-                    <li>Oral transmission method strictly followed.</li>
-                </ul>
-            </div>
-        </div>
-
     </div>
-
 </body>
 </html>
