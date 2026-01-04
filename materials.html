@@ -3,61 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Materials | Vishweshwara</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reuse Global Design System */
-        :root { --bg-body: #0a0a0a; --bg-card: #141414; --text-main: #EAEAEA; --text-muted: #A0A0A0; --gold: #D4AF37; --border-subtle: rgba(212, 175, 55, 0.2); }
-        body { background-color: var(--bg-body); color: var(--text-main); font-family: 'Lato', sans-serif; margin: 0; }
-        nav { padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; }
-        .nav-links a { margin-left: 2rem; color: var(--text-muted); text-decoration: none; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; transition:0.3s; }
-        .nav-links a:hover { color: var(--gold); }
+        :root { --bg-deep: #050505; --gold: #D4AF37; --text-main: #F5F5F5; }
+        body { background: var(--bg-deep); color: var(--text-main); font-family: 'Montserrat', sans-serif; margin: 0; }
+        
+        nav { padding: 2rem 5%; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; }
+        .logo { font-family: 'Cormorant Garamond'; color: #fff; text-decoration: none; font-size: 1.5rem; }
 
-        .container { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
-        .resource-card { display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #222; transition: 0.3s; }
-        .resource-card:hover { border-color: var(--gold); transform: translateX(5px); }
-        .res-title { font-size: 1.1rem; color: #fff; margin-bottom: 0.3rem; }
-        .res-type { font-size: 0.8rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; }
-        .btn-download { color: var(--text-muted); border: 1px solid #333; padding: 0.5rem 1rem; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; }
-        .btn-download:hover { background: var(--gold); color: #000; border-color: var(--gold); }
+        .container { max-width: 800px; margin: 6rem auto; padding: 0 2rem; text-align: center; }
+        
+        .drive-card {
+            background: linear-gradient(145deg, #111, #0a0a0a);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .drive-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        
+        h1 { font-family: 'Cormorant Garamond'; font-size: 3rem; color: var(--gold); margin-bottom: 1rem; }
+        .icon-drive { font-size: 4rem; color: #fff; margin-bottom: 2rem; }
+        
+        .btn-access {
+            display: inline-block;
+            background: var(--gold);
+            color: #000;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            margin-top: 2rem;
+            transition: 0.3s;
+        }
+        .btn-access:hover { background: #fff; box-shadow: 0 0 30px rgba(255,255,255,0.2); }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">VISHWESHWARA</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="dakshina.html">Dakṣiṇā</a>
-        </div>
+        <a href="index.html" class="logo">VISHWESHWARA</a>
+        <a href="index.html" style="color:#aaa; text-decoration:none;">Back</a>
     </nav>
 
     <div class="container">
-        <h1 style="font-family:'Playfair Display'; color:var(--gold); margin-bottom:1rem;">Study Materials</h1>
-        <p style="color:var(--text-muted); margin-bottom:3rem;">Curated resources for the sincere student (Sādhaka).</p>
-
-        <div class="resource-card">
-            <div>
-                <div class="res-title">Sanskrit Pronunciation Guide</div>
-                <span class="res-type">PDF Document</span>
-            </div>
-            <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
-        </div>
-
-        <div class="resource-card">
-            <div>
-                <div class="res-title">Bhagavad Gītā Chapter 1 Vocabulary</div>
-                <span class="res-type">Study Sheet</span>
-            </div>
-            <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
-        </div>
-
-        <div class="resource-card">
-            <div>
-                <div class="res-title">Vedic Meter (Chandas) Basics</div>
-                <span class="res-type">Reference Chart</span>
-            </div>
-            <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+        <div class="drive-card">
+            <i class="fab fa-google-drive icon-drive"></i>
+            <h1>Digital Library</h1>
+            <p style="color: #aaa; max-width: 500px; margin: 0 auto; line-height: 1.6;">
+                Access my curated collection of Sanskrit manuscripts, grammar notes, and chanting guides via Google Drive.
+            </p>
+            
+            <a href="https://drive.google.com/drive/folders/1pazNVJKVXanzOet1c5nyGZCZ6vZ7f6hL" target="_blank" class="btn-access">
+                Open Google Drive
+            </a>
         </div>
     </div>
 </body>
