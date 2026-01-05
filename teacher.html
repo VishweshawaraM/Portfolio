@@ -5,14 +5,20 @@
     <title>Teacher Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <script>tailwind.config = { theme: { extend: { colors: { VedicGold: '#D4AF37', DeepObsidian: '#050505' }, fontFamily: { serif: ['Cormorant Garamond'], sans: ['Montserrat'] } } } }</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { obsidian: '#050505', gold: '#D4AF37', mist: '#A3A3A3' }, fontFamily: { serif: ['"Cormorant Garamond"', 'serif'], sans: ['"Montserrat"', 'sans-serif'] }, backgroundImage: { 'vedic-gradient': 'radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 85%)' } } } }
+    </script>
 </head>
-<body class="bg-DeepObsidian text-gray-200 font-sans antialiased">
-    <nav class="fixed w-full z-50 bg-DeepObsidian/90 border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
-            <a href="index.html" class="font-serif text-2xl tracking-widest text-white">VISHWESHWARA<span class="text-VedicGold">.</span></a>
-            <a href="index.html" class="text-xs uppercase tracking-widest text-VedicGold">Back Home</a>
+<body class="bg-obsidian bg-vedic-gradient text-gray-100 font-sans antialiased">
+    
+    <nav class="fixed w-full z-50 bg-obsidian/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <a href="index.html" class="font-serif text-2xl tracking-[0.15em] text-white">VISHWESHWARA<span class="text-gold">.</span></a>
+            <div class="md:hidden"><button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gold"><i class="fas fa-bars text-xl"></i></button></div>
+             <div class="hidden md:flex space-x-8"><a href="index.html" class="text-xs font-medium uppercase tracking-[0.2em] text-mist hover:text-gold transition-colors">Back Home</a></div>
         </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-obsidian border-b border-gold/10 text-center py-4"><a href="index.html" class="block py-2 text-sm uppercase text-mist">Back Home</a></div>
     </nav>
 
     <div class="max-w-6xl mx-auto px-6 pt-32 pb-20">
@@ -20,45 +26,65 @@
             
             <div class="lg:col-span-4">
                 <div class="sticky top-24">
-                    <div class="aspect-[3/4] overflow-hidden border border-VedicGold/20 mb-6">
-                        <img src="Profile.jpeg" alt="Vishweshwara M" class="w-full h-full object-cover grayscale">
+                    <div class="aspect-[3/4] overflow-hidden border border-gold/20 mb-6 rounded-t-full">
+                        <img src="profile.jpg" alt="Vishweshwara M" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                     </div>
-                    <h3 class="font-serif text-xl text-white mb-1">Vishweshwara M</h3>
-                    <p class="text-xs uppercase tracking-widest text-VedicGold mb-6">Sanskrit Scholar</p>
-                    <div class="space-y-2 text-sm text-neutral-400">
-                        <p>📍 Bangalore, Karnataka</p>
-                        <p>🗣️ Sanskrit, English, Kannada, Hindi</p>
-                        <a href="teaching-platforms.html" class="text-VedicGold hover:underline mt-4 block">View Verified Credentials →</a>
+                    [span_7](start_span)<h3 class="font-serif text-2xl text-white mb-1">Vishweshwara M[span_7](end_span)</h3>
+                    <p class="text-xs uppercase tracking-widest text-gold mb-6">Sanskrit Scholar</p>
+                    <div class="space-y-3 text-sm text-mist">
+                        [span_8](start_span)<p><i class="fas fa-map-marker-alt text-gold w-6"></i> Bangalore, Karnataka[span_8](end_span)</p>
+                        [span_9](start_span)<p><i class="fas fa-language text-gold w-6"></i> Sanskrit, English, Kannada[span_9](end_span)</p>
+                        <a href="teaching-platforms.html" class="text-gold hover:underline mt-4 block text-xs tracking-widest">VIEW CREDENTIALS →</a>
                     </div>
                 </div>
             </div>
 
             <div class="lg:col-span-8 space-y-12">
-                
                 <div>
-                    <h2 class="font-serif text-2xl text-white mb-4 border-b border-white/10 pb-2">Teaching Philosophy</h2>
-                    <p class="text-neutral-400 font-light leading-relaxed">
-                        With over 7 years of immersion in the Gurukula system, my teaching focuses on the accuracy of grammar and the purity of pronunciation. 
-                        I bridge the gap between ancient wisdom and the modern learner, ensuring that the sanctity of the lineage (Paramparā) is maintained while making the subjects accessible.
+                    <h2 class="font-serif text-2xl text-white mb-4 border-b border-white/10 pb-2">Professional Summary</h2>
+                    <p class="text-mist font-light leading-relaxed">
+                        Passionate Sanskrit scholar and educator dedicated to preserving Vedic knowledge. 
+                        With a foundation in traditional Gurukula education (Veda Vignana Gurukulam) and research experience, 
+                        [span_10](start_span)[span_11](start_span)I foster deep cultural understanding and holistic learning.[span_10](end_span)[span_11](end_span)
                     </p>
                 </div>
 
                 <div>
                     <h2 class="font-serif text-2xl text-white mb-4 border-b border-white/10 pb-2">Education & Lineage</h2>
-                    <ul class="space-y-6">
-                        <li class="relative pl-6 border-l border-VedicGold/30">
-                            <span class="text-[10px] text-VedicGold uppercase tracking-widest block mb-1">Expected 2026</span>
-                            <h4 class="text-white text-lg font-serif">M.A. in Acharya (Vedanta & Shastra)</h4>
-                            <p class="text-sm text-neutral-500">Veda Vignana Shodha Samstana Samskrutha Mahapatashala</p>
+                    <ul class="space-y-8">
+                        <li class="relative pl-6 border-l border-gold/30">
+                            <span class="text-[10px] text-gold uppercase tracking-widest block mb-1">Expected 2026</span>
+                            [span_12](start_span)<h4 class="text-white text-lg font-serif">M.A. in Acharya (Vedanta & Shastra)[span_12](end_span)</h4>
+                            <p class="text-sm text-mist">Veda Vignana Shodha Samstana Samskrutha Mahapatashala</p>
                         </li>
-                        <li class="relative pl-6 border-l border-VedicGold/30">
-                            <span class="text-[10px] text-VedicGold uppercase tracking-widest block mb-1">2024</span>
-                            <h4 class="text-white text-lg font-serif">B.A. in Shastri</h4>
-                            <p class="text-sm text-neutral-500">Focus on Sahitya, Vyakarana, and Dharmashastra</p>
+                        <li class="relative pl-6 border-l border-gold/30">
+                            <span class="text-[10px] text-gold uppercase tracking-widest block mb-1">2024</span>
+                            [span_13](start_span)<h4 class="text-white text-lg font-serif">B.A. in Shastri[span_13](end_span)</h4>
+                            <p class="text-sm text-mist">Focus on Sahitya, Vyakarana, and Dharmashastra</p>
+                        </li>
+                         <li class="relative pl-6 border-l border-gold/30">
+                            <span class="text-[10px] text-gold uppercase tracking-widest block mb-1">2022</span>
+                            [span_14](start_span)<h4 class="text-white text-lg font-serif">PUC - Sahithya Exam[span_14](end_span)</h4>
+                            <p class="text-sm text-mist">Classical Sanskrit Literature & Vedic Chanting</p>
                         </li>
                     </ul>
                 </div>
 
+                 <div>
+                    <h2 class="font-serif text-2xl text-white mb-4 border-b border-white/10 pb-2">Experience</h2>
+                    <ul class="space-y-8">
+                        <li class="relative pl-6 border-l border-gold/30">
+                            <span class="text-[10px] text-gold uppercase tracking-widest block mb-1">July 2024 - Feb 2025</span>
+                            [span_15](start_span)<h4 class="text-white text-lg font-serif">Educator[span_15](end_span)</h4>
+                            <p class="text-sm text-mist">Veda Vignana Gurukulam. Taught Sanskrit, Yoga, and Social Science to 20+ students.</p>
+                        </li>
+                        <li class="relative pl-6 border-l border-gold/30">
+                            <span class="text-[10px] text-gold uppercase tracking-widest block mb-1">July 2024 - Feb 2025</span>
+                            [span_16](start_span)<h4 class="text-white text-lg font-serif">Research & Editorial Assistant[span_16](end_span)</h4>
+                            <p class="text-sm text-mist">Veda Vignana Shodha Samsthanam. Conducted research and edited academic papers.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
