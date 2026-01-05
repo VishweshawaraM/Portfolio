@@ -6,60 +6,65 @@
     <title>About | The Lineage</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
-        tailwind.config = { theme: { extend: { colors: { VedicGold: '#D4AF37', DeepObsidian: '#050505' }, fontFamily: { serif: ['Cormorant Garamond'], sans: ['Montserrat'] } } } }
+        tailwind.config = { theme: { extend: { colors: { obsidian: '#050505', gold: '#D4AF37', mist: '#A3A3A3' }, fontFamily: { serif: ['"Cormorant Garamond"', 'serif'], sans: ['"Montserrat"', 'sans-serif'] }, backgroundImage: { 'vedic-gradient': 'radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 85%)' } } } }
     </script>
 </head>
-<body class="bg-DeepObsidian text-gray-200 font-sans antialiased">
-    <nav class="fixed w-full z-50 bg-DeepObsidian/90 backdrop-blur-md border-b border-white/5">
+<body class="bg-obsidian bg-vedic-gradient text-gray-100 font-sans antialiased">
+
+    <nav class="fixed w-full z-50 bg-obsidian/90 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-            <a href="index.html" class="font-serif text-2xl tracking-widest text-white">VISHWESHWARA<span class="text-VedicGold">.</span></a>
+            <a href="index.html" class="font-serif text-2xl tracking-[0.15em] text-white">VISHWESHWARA<span class="text-gold">.</span></a>
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-xs uppercase tracking-[0.2em] hover:text-VedicGold">Home</a>
-                <a href="teaching.html" class="text-xs uppercase tracking-[0.2em] hover:text-VedicGold">Teaching</a>
+                <a href="index.html" class="text-xs font-medium uppercase tracking-[0.2em] text-mist hover:text-gold transition-colors">Home</a>
+                <a href="teaching.html" class="text-xs font-medium uppercase tracking-[0.2em] text-mist hover:text-gold transition-colors">Teaching</a>
+                <a href="teacher.html" class="text-xs font-medium uppercase tracking-[0.2em] text-mist hover:text-gold transition-colors">Profile</a>
             </div>
-            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-VedicGold">Menu</button>
+            <div class="md:hidden"><button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gold"><i class="fas fa-bars text-xl"></i></button></div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-b border-VedicGold/20 text-center py-4"><a href="index.html" class="block py-2 text-sm uppercase">Home</a></div>
+        <div id="mobile-menu" class="hidden md:hidden bg-obsidian border-b border-gold/10 text-center py-4"><a href="index.html" class="block py-2 text-sm uppercase text-mist">Back Home</a></div>
     </nav>
 
     <div class="max-w-4xl mx-auto px-6 pt-32 pb-20">
-        <h1 class="font-serif text-4xl md:text-5xl text-VedicGold mb-12 text-center">Gurukula Paramparā</h1>
+        <div class="text-center mb-16">
+            <span class="text-gold text-[10px] font-bold tracking-[0.4em] uppercase">Paramparā</span>
+            <h1 class="font-serif text-4xl md:text-5xl text-white mt-4">The Gurukula Tradition</h1>
+        </div>
         
-        <div class="border-l border-VedicGold/30 ml-4 md:ml-10 space-y-16">
+        <div class="border-l border-gold/20 ml-4 md:ml-10 space-y-16">
             
             <div class="relative pl-8 md:pl-12">
-                <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-VedicGold"></span>
-                <span class="text-xs font-bold tracking-widest text-VedicGold mb-2 block">THE FOUNDATION</span>
-                <h2 class="font-serif text-2xl text-white mb-4">7 Years of Immersion</h2>
-                <p class="text-neutral-400 font-light leading-relaxed">
-                    My education was not a mere accumulation of degrees, but a transformation of lifestyle. Living in a traditional Gurukula, 
-                    I studied <span class="italic text-white">Vyākaraṇa</span> (Grammar), <span class="italic text-white">Sāhitya</span> (Literature), and 
-                    <span class="italic text-white">Advaita Vedānta</span> under the strict discipline of the lineage.
+                <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-gold shadow-[0_0_10px_#D4AF37]"></span>
+                [span_0](start_span)<span class="text-xs font-bold tracking-widest text-gold mb-2 block">THE FOUNDATION[span_0](end_span)</span>
+                <h2 class="font-serif text-3xl text-white mb-4">7 Years of Immersion</h2>
+                <p class="text-mist font-light leading-relaxed">
+                    My education was not a mere accumulation of degrees, but a transformation of lifestyle. Living in a traditional Gurukula (Veda Vignana Gurukulam), 
+                    I studied <span class="text-white">Vyākaraṇa</span> (Grammar), <span class="text-white">Sāhitya</span> (Literature), and 
+                    <span class="text-white">Advaita Vedānta</span> under the strict discipline of the lineage.
                 </p>
             </div>
 
             <div class="relative pl-8 md:pl-12">
-                <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-VedicGold"></span>
-                <span class="text-xs font-bold tracking-widest text-VedicGold mb-2 block">THE METHOD</span>
-                <h2 class="font-serif text-2xl text-white mb-4">Pronunciation & Integrity</h2>
-                <p class="text-neutral-400 font-light leading-relaxed">
-                    In an era of simplified learning, I uphold the necessity of <span class="italic text-white">Śikṣā</span> (Phonetics). 
+                <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-gold"></span>
+                [span_1](start_span)<span class="text-xs font-bold tracking-widest text-gold mb-2 block">THE DISCIPLINE[span_1](end_span)</span>
+                <h2 class="font-serif text-3xl text-white mb-4">Pronunciation & Integrity</h2>
+                <p class="text-mist font-light leading-relaxed">
+                    In an era of simplified learning, I uphold the necessity of <span class="text-white">Śikṣā</span> (Phonetics). 
                     The Veda is preserved through sound. My teaching emphasizes the exactness of *Svara* (intonation) and the 
                     fidelity to the original texts, avoiding diluted interpretations.
                 </p>
             </div>
 
             <div class="relative pl-8 md:pl-12">
-                <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-VedicGold"></span>
-                <span class="text-xs font-bold tracking-widest text-VedicGold mb-2 block">THE MISSION</span>
-                <h2 class="font-serif text-2xl text-white mb-4">Bhāṣya-Centric Pedagogy</h2>
-                <p class="text-neutral-400 font-light leading-relaxed">
+                <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-gold"></span>
+                [span_2](start_span)<span class="text-xs font-bold tracking-widest text-gold mb-2 block">THE MISSION[span_2](end_span)</span>
+                <h2 class="font-serif text-3xl text-white mb-4">Bhāṣya-Centric Pedagogy</h2>
+                <p class="text-mist font-light leading-relaxed">
                     We study the Bhagavad Gītā and Upaniṣads not through modern opinions, but through the authorized commentaries 
                     (Bhāṣya) of Ādi Śaṅkarācārya. This ensures the student receives the knowledge exactly as it was intended by the Ṛṣis.
                 </p>
             </div>
-
         </div>
     </div>
 </body>
