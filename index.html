@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishweshwara M | Personal Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37', 
+                        dark: '#080808', 
+                        card: '#121212'
+                    },
+                    fontFamily: {
+                        heading: ['"Cormorant Garamond"', 'serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #080808; color: #e5e5e5; }
+        .fade-in { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="font-body selection:bg-gold selection:text-black">
+
+    <nav class="fixed w-full z-50 top-0 bg-dark/90 backdrop-blur border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="font-heading text-xl font-bold tracking-widest text-gold uppercase">Vishweshwara.M</a>
+            <div class="flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#cv" class="hover:text-white transition">CV & Journey</a>
+                <a href="#portfolio" class="hover:text-white transition">Work</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="pt-40 pb-20 px-6 max-w-4xl mx-auto text-center fade-in">
+        
+        <div class="relative w-48 h-48 mx-auto mb-8">
+            <div class="absolute inset-0 rounded-full border border-gold/30 animate-pulse"></div>
+            <img src="vishweshwara.jpg" alt="Vishweshwara M" class="w-full h-full object-cover rounded-full border-4 border-dark shadow-2xl">
+        </div>
+
+        <h1 class="font-heading text-5xl md:text-6xl text-white mb-4">Vishweshwara M</h1>
+        <p class="text-gold text-xs uppercase tracking-[0.2em] mb-8">Sanskrit Scholar • Vedic Educator • Designer</p>
+        
+        <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto text-lg font-light">
+            I am a Gurukula-trained scholar bridging the gap between ancient <strong>Śāstra</strong> and modern technology. 
+            Currently pursuing my Master's (Acharya) in <strong>Advaita Vedanta</strong> while building digital tools to preserve Indian heritage.
+        </p>
+
+        <div class="flex justify-center gap-6 mt-8">
+            <a href="mailto:visanskrit.solopreneur@gmail.com" class="text-gray-500 hover:text-gold transition">
+                <span class="text-sm">Email Me</span>
+            </a>
+            <span class="text-gray-700">•</span>
+            <a href="https://wa.me/919482698612" class="text-gray-500 hover:text-gold transition">
+                <span class="text-sm">WhatsApp</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="cv" class="py-20 px-6 bg-card border-y border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="font-heading text-3xl text-white">My Journey</h2>
+                <a href="Vishweshwara_CV.pdf" download class="border border-white/20 px-6 py-2 rounded text-xs uppercase tracking-widest hover:bg-gold hover:text-black transition">
+                    Download Full CV
+                </a>
+            </div>
+
+            <div class="space-y-12 border-l border-white/10 pl-8 ml-4">
+                
+                <div class="relative">
+                    <span class="absolute -left-[37px] top-2 w-3 h-3 bg-gold rounded-full ring-4 ring-dark"></span>
+                    <span class="text-xs text-gold uppercase tracking-widest">Expected 2026</span>
+                    <h3 class="text-xl text-white font-heading mt-1">M.A. (Acharya) in Vedanta</h3>
+                    <p class="text-sm text-gray-500">Veda Vignana Shodha Samstana</p>
+                    [span_0](start_span)<p class="text-sm text-gray-400 mt-2">Specialization in Advanced Vedanta & Shastra studies[span_0](end_span).</p>
+                </div>
+
+                <div class="relative">
+                    <span class="absolute -left-[37px] top-2 w-3 h-3 bg-gray-700 rounded-full ring-4 ring-dark"></span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest">2024</span>
+                    <h3 class="text-xl text-white font-heading mt-1">B.A. (Shastri) in Vyakarana</h3>
+                    <p class="text-sm text-gray-500">Veda Vignana Gurukulam</p>
+                    [span_1](start_span)<p class="text-sm text-gray-400 mt-2">Focus on Sanskrit Literature, Grammar, and Dharmashastra[span_1](end_span).</p>
+                </div>
+
+                <div class="relative">
+                    <span class="absolute -left-[37px] top-2 w-3 h-3 bg-gray-700 rounded-full ring-4 ring-dark"></span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest">Experience</span>
+                    <h3 class="text-xl text-white font-heading mt-1">Research & Editorial Assistant</h3>
+                    <p class="text-sm text-gray-500">Veda Vignana Shodha Samsthanam</p>
+                    <p class="text-sm text-gray-400 mt-2">
+                        [span_2](start_span)Conducted comprehensive research, edited academic papers, and collaborated with authors to improve clarity[span_2](end_span).
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 px-6 max-w-4xl mx-auto">
+        <h2 class="font-heading text-3xl text-white mb-2 text-center">Selected Works</h2>
+        <p class="text-center text-gray-500 text-xs uppercase tracking-widest mb-12">Design & Research</p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="group relative block bg-card rounded border border-white/10 overflow-hidden">
+                <div class="aspect-video bg-gray-800 relative">
+                     <img src="poster1.jpg" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-white font-heading text-xl">Academic Posters</h3>
+                    <p class="text-gray-500 text-sm mt-2">Designed event posters for Gurukula symposiums and cultural programs.</p>
+                </div>
+            </div>
+
+            <div class="group relative block bg-card rounded border border-white/10 overflow-hidden">
+                <div class="aspect-video bg-gray-800 relative">
+                     <img src="poster2.jpg" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-white font-heading text-xl">Book Cover Design</h3>
+                    <p class="text-gray-500 text-sm mt-2">Layouts and covers for Veda Vignana publications.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-20 pt-10 border-t border-white/5 text-gray-600 text-xs uppercase tracking-widest">
+            &copy; 2026 Vishweshwara M. <br/> Based in Bangalore, Karnataka.
+        </div>
+    </section>
+
+</body>
+</html>
